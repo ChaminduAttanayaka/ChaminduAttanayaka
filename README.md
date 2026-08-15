@@ -1,17 +1,12 @@
 <div align="center">
 
-# CHAMINDU ATTANAYAKA
-
-### DevOps Engineer · Cloud & Platform Engineering
-
-**Cloud Infrastructure · Kubernetes · CI/CD · Observability · Automation**
-
-Building automated, observable and resilient cloud platforms.
+<img src="./assets/hero.svg" width="100%" alt="Chamindu Attanayaka - DevOps Cloud Platform Engineering" />
 
 <br>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/chaminduattanayaka/)
-[![Credly](https://img.shields.io/badge/Certifications-Credly-FF6B00?style=for-the-badge\&logo=credly\&logoColor=white)](https://www.credly.com/users/chamindu-attanayaka)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chaminduattanayaka/)
+[![Credly](https://img.shields.io/badge/Credly-Credentials-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/chamindu-attanayaka)
+[![Projects](https://img.shields.io/badge/GitHub-Projects-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChaminduAttanayaka?tab=repositories)
 
 </div>
 
@@ -21,54 +16,59 @@ Building automated, observable and resilient cloud platforms.
 
 <table>
 <tr>
-<td width="25%" align="center">
+
+<td width="25%" align="center" valign="top">
 
 ### ☁️ Cloud
 
-AWS & Azure
+**AWS · Azure**
 
-Cloud architecture
-Networking
-Compute & containers
-Infrastructure operations
+Cloud Infrastructure  
+Cloud Networking  
+Compute & Containers  
+Infrastructure Operations
 
 </td>
-<td width="25%" align="center">
+
+<td width="25%" align="center" valign="top">
 
 ### ⎈ Platform
 
-Kubernetes & EKS
+**Kubernetes · EKS**
 
-Workload orchestration
-Autoscaling
-Availability controls
-Platform operations
-
-</td>
-<td width="25%" align="center">
-
-### ∞ Delivery
-
-CI/CD & Automation
-
-Jenkins pipelines
-Docker workflows
-Infrastructure automation
-Release engineering
+Container Orchestration  
+Workload Management  
+Autoscaling  
+High Availability
 
 </td>
-<td width="25%" align="center">
+
+<td width="25%" align="center" valign="top">
+
+### ∞ Automation
+
+**CI/CD · IaC**
+
+Jenkins Pipelines  
+Terraform  
+Docker Workflows  
+Release Automation
+
+</td>
+
+<td width="25%" align="center" valign="top">
 
 ### ◉ Observability
 
-Monitoring & Reliability
+**Metrics · Logs · Alerts**
 
-Prometheus
-Grafana
-Elastic Stack
-Alerting & telemetry
+Prometheus  
+Grafana  
+Elastic Stack  
+CloudWatch
 
 </td>
+
 </tr>
 </table>
 
@@ -78,21 +78,27 @@ Alerting & telemetry
 
 <div align="center">
 
-### Cloud
+### ☁️ Cloud Platforms
 
-<img src="https://skillicons.dev/icons?i=aws,azure" />
+<img src="https://skillicons.dev/icons?i=aws,azure" height="52" alt="AWS and Azure" />
 
-### Containers & Platform Engineering
+<br><br>
 
-<img src="https://skillicons.dev/icons?i=kubernetes,docker,terraform" />
+### ⎈ Containers & Infrastructure
 
-### CI/CD & Automation
+<img src="https://skillicons.dev/icons?i=kubernetes,docker,terraform,linux,nginx" height="52" alt="Kubernetes Docker Terraform Linux NGINX" />
 
-<img src="https://skillicons.dev/icons?i=jenkins,github,git,bash,python" />
+<br><br>
 
-### Observability & Systems
+### ∞ CI/CD & Automation
 
-<img src="https://skillicons.dev/icons?i=prometheus,grafana,elasticsearch,linux,nginx" />
+<img src="https://skillicons.dev/icons?i=jenkins,github,git,bash,python" height="52" alt="Jenkins GitHub Git Bash Python" />
+
+<br><br>
+
+### 📊 Observability
+
+<img src="https://skillicons.dev/icons?i=prometheus,grafana,elasticsearch" height="52" alt="Prometheus Grafana Elasticsearch" />
 
 </div>
 
@@ -101,95 +107,139 @@ Alerting & telemetry
 # 🚀 Featured Engineering
 
 <table>
+
 <tr>
-<td width="50%">
 
-### JMeter AWS Load Testing Platform
+<td width="50%" valign="top">
 
-Automated API performance-testing platform integrating **JMeter, Terraform, Jenkins, Docker, AWS EC2, SSM, S3 and ECR**.
+### ⚡ AWS Load Testing Platform
 
-**Engineering areas**
+Automated performance-testing platform integrating JMeter with AWS infrastructure and CI/CD automation.
 
-`Performance Engineering` `IaC` `CI/CD` `AWS Automation`
+**Stack**
 
-[Explore Repository →](https://github.com/ChaminduAttanayaka/jmeter-aws-load-testing-platform)
+`JMeter` `AWS` `Terraform` `Jenkins` `Docker` `S3` `ECR`
+
+**Focus**
+
+Performance Engineering · Infrastructure as Code · CI/CD · Automation
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/jmeter-aws-load-testing-platform)
+
+</td>
+
+<td width="50%" valign="top">
+
+### 📊 EKS Observability Platform
+
+Cloud-native monitoring architecture for Kubernetes workloads with persistent metrics and dashboard storage.
+
+**Stack**
+
+`EKS` `Prometheus` `Grafana` `Helm` `EFS`
+
+**Focus**
+
+Observability · Monitoring · Kubernetes · Platform Reliability
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/Observability-on-AWS-EKS-Fargate)
 
 </td>
 
-<td width="50%">
-
-### AWS EKS Observability Platform
-
-Cloud-native monitoring architecture using **Prometheus, Grafana, Helm, EFS and Jenkins** for persistent Kubernetes observability.
-
-**Engineering areas**
-
-`Observability` `EKS` `Prometheus` `Grafana`
-
-[Explore Repository →](https://github.com/ChaminduAttanayaka/Observability-on-AWS-EKS-Fargate)
-
-</td>
 </tr>
 
 <tr>
-<td width="50%">
 
-### Kubernetes HPA Automation
+<td width="50%" valign="top">
 
-Production-oriented Jenkins automation for managing Kubernetes Horizontal Pod Autoscalers with workload discovery and validation.
+### ⎈ Kubernetes HPA Automation
 
-**Engineering areas**
+Jenkins-based automation for discovering and managing Horizontal Pod Autoscalers across Kubernetes workloads.
 
-`Kubernetes` `Autoscaling` `Jenkins` `EKS`
+**Stack**
 
-[Explore Repository →](https://github.com/ChaminduAttanayaka/jenkins-kubernetes-hpa-manager)
+`Kubernetes` `EKS` `Jenkins` `AWS`
+
+**Focus**
+
+Autoscaling · Platform Automation · Kubernetes Operations
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/jenkins-kubernetes-hpa-manager)
+
+</td>
+
+<td width="50%" valign="top">
+
+### 🔄 EKS Rollout Automation
+
+Controlled Kubernetes rollout automation with validation, approval gates and deployment verification.
+
+**Stack**
+
+`Kubernetes` `EKS` `Jenkins` `AWS CLI`
+
+**Focus**
+
+Deployment Automation · CI/CD · Reliability
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/jenkins-eks-rollout-restart)
 
 </td>
 
-<td width="50%">
-
-### EKS Controlled Rollout Automation
-
-Safe Kubernetes workload restart pipeline with **dry-run validation, approval gates and rollout verification**.
-
-**Engineering areas**
-
-`Deployment Automation` `Kubernetes` `Jenkins` `AWS`
-
-[Explore Repository →](https://github.com/ChaminduAttanayaka/jenkins-eks-rollout-restart)
-
-</td>
 </tr>
 
 <tr>
-<td width="50%">
 
-### Kubernetes Availability Automation
+<td width="50%" valign="top">
 
-Automated generation and management of Kubernetes PodDisruptionBudgets for EKS workloads.
+### 🛡️ Kubernetes Availability Automation
 
-**Engineering areas**
+Automated management of PodDisruptionBudgets for improving Kubernetes workload availability during disruptions.
 
-`High Availability` `Kubernetes` `Automation` `EKS`
+**Stack**
 
-[Explore Repository →](https://github.com/ChaminduAttanayaka/jenkins-eks-poddisruptionbudget-manager)
+`Kubernetes` `EKS` `Jenkins`
+
+**Focus**
+
+High Availability · Kubernetes · Automation
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/jenkins-eks-poddisruptionbudget-manager)
+
+</td>
+
+<td width="50%" valign="top">
+
+### 📦 Container Build & Release
+
+Reusable CI/CD workflow for building container images and publishing versioned artifacts to Amazon ECR.
+
+**Stack**
+
+`Docker` `Jenkins` `AWS` `ECR`
+
+**Focus**
+
+Containerization · CI/CD · Release Engineering
+
+<br>
+
+[**Explore Project →**](https://github.com/ChaminduAttanayaka/jenkins-ecr-docker-image-builder)
 
 </td>
 
-<td width="50%">
-
-### Container Build & Release Pipeline
-
-Reusable Jenkins CI/CD workflow for building Docker images and publishing versioned artifacts to Amazon ECR.
-
-**Engineering areas**
-
-`Docker` `ECR` `CI/CD` `Release Engineering`
-
-[Explore Repository →](https://github.com/ChaminduAttanayaka/jenkins-ecr-docker-image-builder)
-
-</td>
 </tr>
+
 </table>
 
 ---
@@ -198,43 +248,80 @@ Reusable Jenkins CI/CD workflow for building Docker images and publishing versio
 
 <div align="center">
 
-**AWS Certified Solutions Architect – Professional**
-**AWS Certified Solutions Architect – Associate**
+### Amazon Web Services
+
+**AWS Certified Solutions Architect – Professional**  
+**AWS Certified Solutions Architect – Associate**  
 **AWS Certified SysOps Administrator – Associate**
+
+<br>
+
+### Microsoft Azure
+
 **Microsoft Certified: Azure Administrator Associate**
+
+<br>
+
+### HashiCorp
+
 **HashiCorp Certified: Terraform Associate**
 
 <br>
 
-[View verified credentials →](https://www.credly.com/users/chamindu-attanayaka)
+[![Verified Credentials](https://img.shields.io/badge/View_Verified_Credentials-Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/chamindu-attanayaka)
 
 </div>
 
 ---
 
-## 🧭 Engineering Interests
+## 📈 GitHub Activity
 
-```text
-Cloud Architecture       ████████████████████
-Kubernetes               ████████████████████
-Platform Engineering     ████████████████████
-CI/CD Automation         ████████████████████
-Observability            ████████████████████
-Infrastructure as Code   ████████████████████
-```
+<div align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=ChaminduAttanayaka&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github" alt="GitHub stats" />
+
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=ChaminduAttanayaka&theme=github-dark-blue&hide_border=true" alt="GitHub streak" />
+
+<br>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ChaminduAttanayaka&layout=compact&hide_border=true&theme=github_dark&langs_count=8" alt="Top languages" />
+
+</div>
+
+---
+
+## 🧭 Engineering Domains
+
+<div align="center">
+
+![Cloud Architecture](https://img.shields.io/badge/Cloud_Architecture-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Platform Engineering](https://img.shields.io/badge/Platform_Engineering-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Infrastructure as Code](https://img.shields.io/badge/Infrastructure_as_Code-844FBA?style=for-the-badge&logo=terraform&logoColor=white)
+
+![CI/CD](https://img.shields.io/badge/CI%2FCD_Automation-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+![Observability](https://img.shields.io/badge/Observability-F46800?style=for-the-badge&logo=prometheus&logoColor=white)
+![Containers](https://img.shields.io/badge/Container_Engineering-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-Engineering-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+</div>
 
 ---
 
 <div align="center">
 
-### BUILD · AUTOMATE · OBSERVE · SCALE
+## BUILD · AUTOMATE · OBSERVE · SCALE
 
-Cloud-native engineering focused on reliability, automation and operational excellence.
+**Cloud-native engineering with automation, reliability and observability at the core.**
 
 <br>
 
-[LinkedIn](https://www.linkedin.com/in/chaminduattanayaka/) •
-[Credly](https://www.credly.com/users/chamindu-attanayaka) •
-[Repositories](https://github.com/ChaminduAttanayaka?tab=repositories)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chaminduattanayaka/)
+[![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/users/chamindu-attanayaka)
+[![GitHub](https://img.shields.io/badge/Repositories-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ChaminduAttanayaka?tab=repositories)
+
+<br><br>
+
+<sub>DevOps · Cloud · Platform Engineering</sub>
 
 </div>
