@@ -1,8 +1,24 @@
-# Animated GitHub Portfolio — Setup
+# One-Page GitHub Portfolio
 
-This package is designed for the special GitHub profile repository:
+This version fixes the card-overlap problem in the previous animated profile.
 
-`ChaminduAttanayaka/ChaminduAttanayaka`
+## Why the old version broke
+
+The previous SVG files animated CSS `transform` on groups that also used SVG `transform="translate(...)"`.
+GitHub/browser SVG rendering can replace the original transform during animation, causing cards to move to the SVG origin and overlap.
+
+This version avoids transform animation completely.
+
+Animations are limited to:
+
+- opacity pulsing
+- subtle background breathing
+- animated dashed connector lines
+- glow effects
+
+All portfolio components now live inside a single:
+
+`assets/portfolio.svg`
 
 ## Structure
 
@@ -11,35 +27,27 @@ ChaminduAttanayaka/
 ├── README.md
 ├── PROFILE-SETUP.md
 └── assets/
-    ├── hero.svg
-    ├── engineering-focus.svg
-    ├── technology-matrix.svg
-    ├── featured-engineering.svg
-    ├── certifications.svg
-    └── footer.svg
+    └── portfolio.svg
 ```
 
 ## Install
 
-If the profile repository already exists:
+Copy these files into the special GitHub profile repository:
+
+`ChaminduAttanayaka/ChaminduAttanayaka`
+
+Then run:
 
 ```bash
-git clone https://github.com/ChaminduAttanayaka/ChaminduAttanayaka.git
-cd ChaminduAttanayaka
-```
-
-Copy all files from this package into the repository.
-
-Then:
-
-```bash
-git add README.md PROFILE-SETUP.md assets/
-git commit -m "feat: add animated GitHub engineering portfolio"
+git add README.md PROFILE-SETUP.md assets/portfolio.svg
+git commit -m "feat: add one-page animated engineering portfolio"
 git push origin main
 ```
 
-## Important GitHub limitation
+## Important
 
-GitHub strips normal webpage CSS and JavaScript from README files. This portfolio therefore uses self-contained SVG animations, which is the most practical way to create an animated GitHub profile while staying inside GitHub's README renderer.
+Keep the `portfolio.svg` path unchanged because `README.md` loads:
 
-The repository links remain normal Markdown links below the visual Featured Engineering section because links inside an embedded SVG image are not reliably interactive when rendered by GitHub.
+`./assets/portfolio.svg`
+
+The links below the SVG remain regular Markdown links because individual areas inside an SVG embedded through an `<img>` tag are not reliably clickable on GitHub.

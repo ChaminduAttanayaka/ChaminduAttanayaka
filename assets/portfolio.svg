@@ -1,0 +1,294 @@
+<svg width="1200" height="1540" viewBox="0 0 1200 1540" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="1540">
+    <stop stop-color="#07111E"/>
+    <stop offset=".48" stop-color="#081321"/>
+    <stop offset="1" stop-color="#09101B"/>
+  </linearGradient>
+
+  <linearGradient id="accent" x1="150" y1="0" x2="1050" y2="1540">
+    <stop stop-color="#2F81F7"/>
+    <stop offset=".5" stop-color="#58A6FF"/>
+    <stop offset="1" stop-color="#8B5CF6"/>
+  </linearGradient>
+
+  <linearGradient id="line" x1="0" x2="1">
+    <stop stop-color="#2F81F7" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#58A6FF"/>
+    <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+  </linearGradient>
+
+  <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+    <stop stop-color="#2F81F7" stop-opacity=".22"/>
+    <stop offset="1" stop-color="#2F81F7" stop-opacity="0"/>
+  </radialGradient>
+
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="7" result="b"/>
+    <feMerge>
+      <feMergeNode in="b"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <style>
+    text {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    @keyframes dash {
+      to { stroke-dashoffset: -80; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: .28; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: .16; }
+      50% { opacity: .33; }
+    }
+
+    @keyframes shimmer {
+      0% { opacity: .18; }
+      50% { opacity: .65; }
+      100% { opacity: .18; }
+    }
+
+    .flow {
+      stroke-dasharray: 12 14;
+      animation: dash 2.4s linear infinite;
+    }
+
+    .pulse {
+      animation: pulse 2.6s ease-in-out infinite;
+    }
+
+    .breathe {
+      animation: breathe 5s ease-in-out infinite;
+    }
+
+    .shimmer {
+      animation: shimmer 3.2s ease-in-out infinite;
+    }
+  </style>
+</defs>
+
+<!-- PAGE -->
+<rect width="1200" height="1540" rx="28" fill="url(#bg)"/>
+
+<!-- Ambient -->
+<ellipse cx="600" cy="190" rx="400" ry="280" fill="url(#heroGlow)" class="breathe"/>
+<circle cx="1080" cy="760" r="300" fill="#8B5CF6" opacity=".035"/>
+<circle cx="110" cy="1170" r="250" fill="#2F81F7" opacity=".035"/>
+
+<!-- Subtle global grid -->
+<g opacity=".045" stroke="#8B949E">
+  <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200M0 800H1200M0 900H1200M0 1000H1200M0 1100H1200M0 1200H1200M0 1300H1200M0 1400H1200M0 1500H1200"/>
+  <path d="M100 0V1540M200 0V1540M300 0V1540M400 0V1540M500 0V1540M600 0V1540M700 0V1540M800 0V1540M900 0V1540M1000 0V1540M1100 0V1540"/>
+</g>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<g>
+  <rect x="46" y="34" width="192" height="32" rx="16" fill="#0C1A2C" stroke="#2F81F7" stroke-opacity=".55"/>
+  <circle cx="66" cy="50" r="5" fill="#3FB950" class="pulse"/>
+  <text x="80" y="55" font-size="12" font-weight="750" letter-spacing="1" fill="#C9D1D9">ENGINEERING ONLINE</text>
+
+  <text x="600" y="118" text-anchor="middle" font-size="17" font-weight="800" letter-spacing="5" fill="#58A6FF">
+    DEVOPS · CLOUD · PLATFORM
+  </text>
+
+  <text x="600" y="174" text-anchor="middle" font-size="48" font-weight="850" letter-spacing="1" fill="#F0F6FC">
+    CHAMINDU ATTANAYAKA
+  </text>
+
+  <text x="600" y="208" text-anchor="middle" font-size="16" font-weight="500" fill="#8B949E">
+    Building automated, observable and resilient cloud platforms
+  </text>
+
+  <!-- central platform hub -->
+  <circle cx="600" cy="302" r="49" fill="#0B182A" stroke="url(#accent)" stroke-width="2"/>
+  <circle cx="600" cy="302" r="69" fill="none" stroke="#58A6FF" stroke-opacity=".16"/>
+  <circle cx="600" cy="233" r="4" fill="#58A6FF" filter="url(#glow)" class="pulse"/>
+
+  <text x="600" y="298" text-anchor="middle" font-size="12" font-weight="850" letter-spacing="1.2" fill="#58A6FF">PLATFORM</text>
+  <text x="600" y="317" text-anchor="middle" font-size="10.5" font-weight="650" fill="#C9D1D9">ENGINEERING</text>
+
+  <!-- connection lines -->
+  <g stroke="url(#accent)" stroke-width="1.6" fill="none" opacity=".75">
+    <path d="M551 288C485 260 423 260 360 278" class="flow"/>
+    <path d="M649 288C715 260 777 260 840 278" class="flow"/>
+    <path d="M551 318C485 346 423 346 360 328" class="flow"/>
+    <path d="M649 318C715 346 777 346 840 328" class="flow"/>
+  </g>
+
+  <!-- Four capability mini cards -->
+  <g>
+    <rect x="95" y="245" width="265" height="70" rx="17" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".5"/>
+    <circle cx="119" cy="270" r="4" fill="#58A6FF" class="pulse"/>
+    <text x="134" y="275" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
+    <text x="119" y="296" font-size="11.5" font-weight="600" fill="#8B949E">AWS · Azure · Networking</text>
+
+    <rect x="840" y="245" width="265" height="70" rx="17" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".5"/>
+    <circle cx="864" cy="270" r="4" fill="#A78BFA" class="pulse"/>
+    <text x="879" y="275" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
+    <text x="864" y="296" font-size="11.5" font-weight="600" fill="#8B949E">Jenkins · Terraform · CI/CD</text>
+
+    <rect x="95" y="325" width="265" height="70" rx="17" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".45"/>
+    <circle cx="119" cy="350" r="4" fill="#58A6FF" class="pulse"/>
+    <text x="134" y="355" font-size="14" font-weight="800" fill="#F0F6FC">KUBERNETES</text>
+    <text x="119" y="376" font-size="11.5" font-weight="600" fill="#8B949E">EKS · Containers · Scaling</text>
+
+    <rect x="840" y="325" width="265" height="70" rx="17" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".45"/>
+    <circle cx="864" cy="350" r="4" fill="#58A6FF" class="pulse"/>
+    <text x="879" y="355" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
+    <text x="864" y="376" font-size="11.5" font-weight="600" fill="#8B949E">Prometheus · Grafana · Elastic</text>
+  </g>
+
+  <text x="600" y="430" text-anchor="middle" font-size="10.5" font-weight="800" letter-spacing="4" fill="#6E7681">
+    BUILD · AUTOMATE · OBSERVE · SCALE
+  </text>
+</g>
+
+<!-- Section divider -->
+<line x1="70" y1="468" x2="1130" y2="468" stroke="url(#line)" stroke-width="1.4"/>
+
+<!-- ===================================================== -->
+<!-- ENGINEERING FOCUS -->
+<!-- ===================================================== -->
+
+<g>
+  <text x="70" y="515" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">ENGINEERING FOCUS</text>
+  <text x="70" y="540" font-size="12.5" fill="#8B949E">Core disciplines behind cloud-native platform delivery</text>
+
+  <!-- Card 1 -->
+  <rect x="70" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".45"/>
+  <circle cx="94" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="108" y="599" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
+  <text x="94" y="630" font-size="11.5" fill="#C9D1D9">AWS · Azure</text>
+  <text x="94" y="653" font-size="11.5" fill="#8B949E">Infrastructure · Networking</text>
+  <text x="94" y="676" font-size="11.5" fill="#8B949E">Compute · Containers</text>
+
+  <!-- Card 2 -->
+  <rect x="340" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".4"/>
+  <circle cx="364" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="378" y="599" font-size="14" font-weight="800" fill="#F0F6FC">PLATFORM</text>
+  <text x="364" y="630" font-size="11.5" fill="#C9D1D9">Kubernetes · EKS</text>
+  <text x="364" y="653" font-size="11.5" fill="#8B949E">Orchestration · Scaling</text>
+  <text x="364" y="676" font-size="11.5" fill="#8B949E">Availability · Operations</text>
+
+  <!-- Card 3 -->
+  <rect x="610" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".45"/>
+  <circle cx="634" cy="594" r="4" fill="#A78BFA" class="pulse"/>
+  <text x="648" y="599" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
+  <text x="634" y="630" font-size="11.5" fill="#C9D1D9">Jenkins · Terraform</text>
+  <text x="634" y="653" font-size="11.5" fill="#8B949E">CI/CD · IaC</text>
+  <text x="634" y="676" font-size="11.5" fill="#8B949E">Release Engineering</text>
+
+  <!-- Card 4 -->
+  <rect x="880" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".4"/>
+  <circle cx="904" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="918" y="599" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
+  <text x="904" y="630" font-size="11.5" fill="#C9D1D9">Prometheus · Grafana</text>
+  <text x="904" y="653" font-size="11.5" fill="#8B949E">Metrics · Logs · Alerts</text>
+  <text x="904" y="676" font-size="11.5" fill="#8B949E">CloudWatch · Elastic</text>
+</g>
+
+<!-- ===================================================== -->
+<!-- TECHNOLOGY MATRIX -->
+<!-- ===================================================== -->
+
+<g>
+  <text x="70" y="752" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">TECHNOLOGY MATRIX</text>
+  <text x="70" y="777" font-size="12.5" fill="#8B949E">Selected tools across cloud, containers, automation and observability</text>
+
+  <!-- tech row 1 -->
+  <rect x="70" y="805" width="1060" height="52" rx="15" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".3"/>
+  <circle cx="95" cy="831" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="114" y="836" font-size="12.5" font-weight="850" fill="#F0F6FC">CLOUD</text>
+  <text x="235" y="836" font-size="12.3" font-weight="600" fill="#C9D1D9">AWS · Azure · VPC · IAM · EKS · EC2 · RDS · S3 · ECR</text>
+
+  <!-- tech row 2 -->
+  <rect x="70" y="867" width="1060" height="52" rx="15" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".27"/>
+  <circle cx="95" cy="893" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="114" y="898" font-size="12.5" font-weight="850" fill="#F0F6FC">PLATFORM</text>
+  <text x="235" y="898" font-size="12.3" font-weight="600" fill="#C9D1D9">Kubernetes · Docker · Helm · Linux · NGINX · Autoscaling</text>
+
+  <!-- tech row 3 -->
+  <rect x="70" y="929" width="1060" height="52" rx="15" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".3"/>
+  <circle cx="95" cy="955" r="4" fill="#A78BFA" class="pulse"/>
+  <text x="114" y="960" font-size="12.5" font-weight="850" fill="#F0F6FC">AUTOMATION</text>
+  <text x="235" y="960" font-size="12.3" font-weight="600" fill="#C9D1D9">Jenkins · Terraform · GitHub · Git · Bash · Python · CI/CD</text>
+
+  <!-- tech row 4 -->
+  <rect x="70" y="991" width="1060" height="52" rx="15" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".27"/>
+  <circle cx="95" cy="1017" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="114" y="1022" font-size="12.5" font-weight="850" fill="#F0F6FC">OBSERVABILITY</text>
+  <text x="235" y="1022" font-size="12.3" font-weight="600" fill="#C9D1D9">Prometheus · Grafana · Elastic Stack · CloudWatch · Alerting</text>
+</g>
+
+<!-- ===================================================== -->
+<!-- FEATURED ENGINEERING -->
+<!-- ===================================================== -->
+
+<g>
+  <text x="70" y="1098" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">FEATURED ENGINEERING</text>
+  <text x="70" y="1123" font-size="12.5" fill="#8B949E">Selected automation, Kubernetes, observability and platform projects</text>
+
+  <!-- row 1 -->
+  <rect x="70" y="1152" width="515" height="112" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".43"/>
+  <circle cx="95" cy="1178" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="112" y="1183" font-size="14" font-weight="850" fill="#F0F6FC">AWS LOAD TESTING PLATFORM</text>
+  <text x="95" y="1211" font-size="11.5" fill="#C9D1D9">JMeter · AWS · Terraform · Jenkins · Docker</text>
+  <text x="95" y="1237" font-size="10.5" font-weight="750" fill="#58A6FF">PERFORMANCE · IaC · CI/CD</text>
+
+  <rect x="615" y="1152" width="515" height="112" rx="18" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".43"/>
+  <circle cx="640" cy="1178" r="4" fill="#A78BFA" class="pulse"/>
+  <text x="657" y="1183" font-size="14" font-weight="850" fill="#F0F6FC">EKS OBSERVABILITY PLATFORM</text>
+  <text x="640" y="1211" font-size="11.5" fill="#C9D1D9">EKS · Prometheus · Grafana · Helm · EFS</text>
+  <text x="640" y="1237" font-size="10.5" font-weight="750" fill="#A78BFA">OBSERVABILITY · EKS · RELIABILITY</text>
+
+  <!-- row 2 -->
+  <rect x="70" y="1278" width="515" height="112" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".38"/>
+  <circle cx="95" cy="1304" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="112" y="1309" font-size="14" font-weight="850" fill="#F0F6FC">KUBERNETES AUTOMATION</text>
+  <text x="95" y="1337" font-size="11.5" fill="#C9D1D9">HPA · Rollout · PodDisruptionBudget · Jenkins</text>
+  <text x="95" y="1363" font-size="10.5" font-weight="750" fill="#58A6FF">SCALING · AVAILABILITY · OPERATIONS</text>
+
+  <rect x="615" y="1278" width="515" height="112" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".38"/>
+  <circle cx="640" cy="1304" r="4" fill="#58A6FF" class="pulse"/>
+  <text x="657" y="1309" font-size="14" font-weight="850" fill="#F0F6FC">CONTAINER BUILD &amp; RELEASE</text>
+  <text x="640" y="1337" font-size="11.5" fill="#C9D1D9">Docker · Jenkins · AWS · ECR</text>
+  <text x="640" y="1363" font-size="10.5" font-weight="750" fill="#58A6FF">CONTAINERS · RELEASE ENGINEERING</text>
+</g>
+
+<!-- ===================================================== -->
+<!-- CERTIFICATION / CONNECT FOOTER -->
+<!-- ===================================================== -->
+
+<g>
+  <line x1="70" y1="1425" x2="1130" y2="1425" stroke="url(#line)" stroke-width="1.4"/>
+
+  <text x="70" y="1464" font-size="12" font-weight="850" letter-spacing="2" fill="#58A6FF">CERTIFICATIONS</text>
+  <text x="70" y="1490" font-size="11.5" fill="#C9D1D9">
+    AWS Solutions Architect Professional · AWS Solutions Architect Associate · AWS SysOps Associate
+  </text>
+  <text x="70" y="1513" font-size="11.5" fill="#C9D1D9">
+    Azure Administrator Associate · HashiCorp Terraform Associate
+  </text>
+
+  <text x="1130" y="1470" text-anchor="end" font-size="10.5" font-weight="800" letter-spacing="2.2" fill="#6E7681">
+    CLOUD · PLATFORM · AUTOMATION · OBSERVABILITY
+  </text>
+  <text x="1130" y="1501" text-anchor="end" font-size="11.5" font-weight="700" fill="#8B949E">
+    LinkedIn · Credly · GitHub
+  </text>
+</g>
+
+<!-- Outer border -->
+<rect x=".75" y=".75" width="1198.5" height="1538.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
+</svg>
