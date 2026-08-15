@@ -1,35 +1,53 @@
-# One-Page Animated GitHub Portfolio v3
+# Final Animated GitHub Portfolio
 
-This version replaces CSS keyframe animations with native SVG/SMIL animation.
+## Design
 
-## Why
+This package uses one continuous GitHub-native SVG dashboard.
 
-GitHub may render CSS animation inside repository SVGs inconsistently.
-This version uses `<animate>` directly inside SVG elements.
+The background has been changed to:
 
-## Animated elements
+- clean deep navy
+- very subtle blue engineering grid
+- restrained top hero glow
+- no large purple/blue background blobs
 
-- engineering-online status light
-- central platform pulse rings
-- moving dashed data-flow lines
-- capability/focus status dots
-- technology telemetry lines
-- project activity indicators
-- section data-flow indicators
-- bottom telemetry heartbeat
-- subtle animated page border
+Animations use native SVG `<animate>` elements and do not move card positions.
 
-No card positions are animated, so the layout remains fixed.
+## Package
+
+```text
+README.md
+PROFILE-SETUP.md
+assets/
+└── portfolio.svg
+```
 
 ## Install
 
-Replace your current `assets/portfolio.svg` and `README.md`, then:
+Copy the files into:
+
+`ChaminduAttanayaka/ChaminduAttanayaka`
+
+Then run:
 
 ```bash
-git add README.md assets/portfolio.svg
-git commit -m "fix: use native SVG animation for GitHub profile"
+git add README.md PROFILE-SETUP.md assets/portfolio.svg
+git commit -m "feat: finalize animated GitHub engineering portfolio"
 git push origin main
 ```
 
-If GitHub still shows the old SVG after pushing, hard-refresh the profile page or rename
-`portfolio.svg` to `portfolio-v3.svg` and update the README path to bypass image caching.
+## GitHub cache
+
+If GitHub displays an older version of the SVG, rename:
+
+`assets/portfolio.svg`
+
+to:
+
+`assets/portfolio-final.svg`
+
+and update README.md:
+
+```html
+<img src="./assets/portfolio-final.svg" width="100%" alt="Chamindu Attanayaka - DevOps Cloud Platform Engineering Portfolio" />
+```

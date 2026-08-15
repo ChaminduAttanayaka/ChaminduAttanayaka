@@ -23,6 +23,12 @@
     <stop offset="1" stop-color="#2F81F7" stop-opacity="0"/>
   </radialGradient>
 
+  <radialGradient id="cleanTopGlow" cx="50%" cy="0%" r="75%">
+    <stop offset="0%" stop-color="#2F81F7" stop-opacity=".11"/>
+    <stop offset="48%" stop-color="#2F81F7" stop-opacity=".025"/>
+    <stop offset="100%" stop-color="#2F81F7" stop-opacity="0"/>
+  </radialGradient>
+
   <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
     <feGaussianBlur stdDeviation="7" result="b"/>
     <feMerge>
@@ -40,16 +46,15 @@
 
 <!-- PAGE -->
 <rect width="1200" height="1540" rx="28" fill="url(#bg)"/>
+<rect width="1200" height="520" rx="28" fill="url(#cleanTopGlow)"/>
+
 
 <!-- Ambient -->
-<ellipse cx="600" cy="190" rx="400" ry="280" fill="url(#heroGlow)">
-    <animate attributeName="opacity" values="0.12;0.34;0.12" dur="5s" repeatCount="indefinite"/>
-</ellipse>
-<circle cx="1080" cy="760" r="300" fill="#8B5CF6" opacity=".035"/>
-<circle cx="110" cy="1170" r="250" fill="#2F81F7" opacity=".035"/>
+
+
 
 <!-- Subtle global grid -->
-<g opacity=".045" stroke="#8B949E">
+<g opacity=".032" stroke="#58A6FF">
   <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200M0 700H1200M0 800H1200M0 900H1200M0 1000H1200M0 1100H1200M0 1200H1200M0 1300H1200M0 1400H1200M0 1500H1200"/>
   <path d="M100 0V1540M200 0V1540M300 0V1540M400 0V1540M500 0V1540M600 0V1540M700 0V1540M800 0V1540M900 0V1540M1000 0V1540M1100 0V1540"/>
 </g>
