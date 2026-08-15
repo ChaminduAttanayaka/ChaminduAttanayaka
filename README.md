@@ -212,18 +212,6 @@ Reusable Jenkins CI/CD workflow for building Docker images and publishing versio
 
 ---
 
-## 📊 GitHub Engineering Activity
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ChaminduAttanayaka&show_icons=true&hide_border=true&theme=github_dark" />
-
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=ChaminduAttanayaka&theme=github-dark-blue&hide_border=true" />
-
-</div>
-
----
-
 ## 🧭 Engineering Interests
 
 ```text
