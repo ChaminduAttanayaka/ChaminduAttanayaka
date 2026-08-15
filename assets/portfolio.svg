@@ -35,85 +35,6 @@
     text {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-
-    @keyframes dash {
-      to { stroke-dashoffset: -80; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: .28; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes breathe {
-      0%, 100% { opacity: .16; }
-      50% { opacity: .33; }
-    }
-
-    @keyframes shimmer {
-      0% { opacity: .18; }
-      50% { opacity: .65; }
-      100% { opacity: .18; }
-    }
-
-    .flow {
-      stroke-dasharray: 12 14;
-      animation: dash 2.4s linear infinite;
-    }
-
-    .pulse {
-      animation: pulse 2.6s ease-in-out infinite;
-    }
-
-    .breathe {
-      animation: breathe 5s ease-in-out infinite;
-    }
-
-    .shimmer {
-      animation: shimmer 3.2s ease-in-out infinite;
-    }
-
-    @keyframes borderFlow {
-      to { stroke-dashoffset: -120; }
-    }
-
-    @keyframes signal {
-      0%, 100% { opacity: .18; }
-      25% { opacity: .85; }
-      50% { opacity: .35; }
-      75% { opacity: .7; }
-    }
-
-    @keyframes glowPulse {
-      0%, 100% { opacity: .12; }
-      50% { opacity: .42; }
-    }
-
-    @keyframes dataPulse {
-      0%, 100% { stroke-opacity: .18; }
-      50% { stroke-opacity: .72; }
-    }
-
-    .border-flow {
-      stroke-dasharray: 16 12;
-      animation: borderFlow 5s linear infinite;
-    }
-
-    .signal {
-      animation: signal 3.2s ease-in-out infinite;
-    }
-
-    .signal2 {
-      animation: signal 4.1s ease-in-out .8s infinite;
-    }
-
-    .glow-pulse {
-      animation: glowPulse 4.8s ease-in-out infinite;
-    }
-
-    .data-pulse {
-      animation: dataPulse 3.6s ease-in-out infinite;
-    }
   </style>
 </defs>
 
@@ -121,7 +42,9 @@
 <rect width="1200" height="1540" rx="28" fill="url(#bg)"/>
 
 <!-- Ambient -->
-<ellipse cx="600" cy="190" rx="400" ry="280" fill="url(#heroGlow)" class="breathe"/>
+<ellipse cx="600" cy="190" rx="400" ry="280" fill="url(#heroGlow)">
+    <animate attributeName="opacity" values="0.12;0.34;0.12" dur="5s" repeatCount="indefinite"/>
+</ellipse>
 <circle cx="1080" cy="760" r="300" fill="#8B5CF6" opacity=".035"/>
 <circle cx="110" cy="1170" r="250" fill="#2F81F7" opacity=".035"/>
 
@@ -131,47 +54,16 @@
   <path d="M100 0V1540M200 0V1540M300 0V1540M400 0V1540M500 0V1540M600 0V1540M700 0V1540M800 0V1540M900 0V1540M1000 0V1540M1100 0V1540"/>
 </g>
 
-
-<!-- Animated ambient telemetry -->
-<g opacity=".9">
-  <path d="M86 182H250" stroke="#2F81F7" stroke-width="1.2" stroke-opacity=".22" class="border-flow"/>
-  <path d="M950 142H1110" stroke="#8B5CF6" stroke-width="1.2" stroke-opacity=".22" class="border-flow"/>
-  <path d="M90 1075H250" stroke="#58A6FF" stroke-width="1.2" stroke-opacity=".18" class="border-flow"/>
-  <path d="M945 1075H1110" stroke="#2F81F7" stroke-width="1.2" stroke-opacity=".18" class="border-flow"/>
-
-  <circle cx="92" cy="182" r="3.5" fill="#58A6FF" class="signal"/>
-  <circle cx="245" cy="182" r="3.5" fill="#58A6FF" class="signal2"/>
-  <circle cx="955" cy="142" r="3.5" fill="#A78BFA" class="signal2"/>
-  <circle cx="1105" cy="142" r="3.5" fill="#A78BFA" class="signal"/>
-
-  <circle cx="104" cy="1048" r="3" fill="#58A6FF" class="signal2"/>
-  <circle cx="1094" cy="1048" r="3" fill="#58A6FF" class="signal"/>
-</g>
-
-<!-- Faint live network map -->
-<g stroke="#58A6FF" stroke-width="1" fill="none" opacity=".14" class="data-pulse">
-  <path d="M1030 495L1080 525L1050 575L1110 605"/>
-  <path d="M110 720L145 750L120 790L170 820"/>
-  <path d="M1010 880L1060 910L1038 950L1090 980"/>
-</g>
-<g fill="#58A6FF">
-  <circle cx="1030" cy="495" r="2.8" class="signal"/>
-  <circle cx="1080" cy="525" r="2.8" class="signal2"/>
-  <circle cx="1050" cy="575" r="2.8" class="signal"/>
-  <circle cx="1110" cy="605" r="2.8" class="signal2"/>
-  <circle cx="110" cy="720" r="2.8" class="signal2"/>
-  <circle cx="145" cy="750" r="2.8" class="signal"/>
-  <circle cx="120" cy="790" r="2.8" class="signal2"/>
-  <circle cx="170" cy="820" r="2.8" class="signal"/>
-</g>
-
 <!-- ===================================================== -->
 <!-- HERO -->
 <!-- ===================================================== -->
 
 <g>
   <rect x="46" y="34" width="192" height="32" rx="16" fill="#0C1A2C" stroke="#2F81F7" stroke-opacity=".55"/>
-  <circle cx="66" cy="50" r="5" fill="#3FB950" class="pulse"/>
+  <circle cx="66" cy="50" r="5" fill="#3FB950">
+    <animate attributeName="opacity" values="0.35;1;0.35" dur="2.2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4.3;5.6;4.3" dur="2.2s" repeatCount="indefinite"/>
+</circle>
   <text x="80" y="55" font-size="12" font-weight="750" letter-spacing="1" fill="#C9D1D9">ENGINEERING ONLINE</text>
 
   <text x="600" y="118" text-anchor="middle" font-size="17" font-weight="800" letter-spacing="5" fill="#58A6FF">
@@ -189,41 +81,66 @@
   <!-- central platform hub -->
   <circle cx="600" cy="302" r="49" fill="#0B182A" stroke="url(#accent)" stroke-width="2"/>
   <circle cx="600" cy="302" r="69" fill="none" stroke="#58A6FF" stroke-opacity=".16"/>
-  <circle cx="600" cy="302" r="82" fill="none" stroke="#58A6FF" stroke-width="1" stroke-opacity=".10" class="glow-pulse"/>
-  <circle cx="600" cy="302" r="92" fill="none" stroke="#8B5CF6" stroke-width="1" stroke-opacity=".08" class="glow-pulse"/>
+  <circle cx="600" cy="302" r="78" fill="none" stroke="#58A6FF" stroke-width="1" opacity=".10">
+    <animate attributeName="r" values="74;84;74" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".08;.28;.08" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="302" r="90" fill="none" stroke="#8B5CF6" stroke-width="1" opacity=".06">
+    <animate attributeName="r" values="86;98;86" dur="5.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".05;.20;.05" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
 
-  <circle cx="600" cy="233" r="4" fill="#58A6FF" filter="url(#glow)" class="pulse"/>
+  <circle cx="600" cy="233" r="4" fill="#58A6FF" filter="url(#glow)">
+    <animate attributeName="opacity" values=".25;1;.25" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3.2;5;3.2" dur="2s" repeatCount="indefinite"/>
+</circle>
 
   <text x="600" y="298" text-anchor="middle" font-size="12" font-weight="850" letter-spacing="1.2" fill="#58A6FF">PLATFORM</text>
   <text x="600" y="317" text-anchor="middle" font-size="10.5" font-weight="650" fill="#C9D1D9">ENGINEERING</text>
 
   <!-- connection lines -->
   <g stroke="url(#accent)" stroke-width="1.6" fill="none" opacity=".75">
-    <path d="M551 288C485 260 423 260 360 278" class="flow"/>
-    <path d="M649 288C715 260 777 260 840 278" class="flow"/>
-    <path d="M551 318C485 346 423 346 360 328" class="flow"/>
-    <path d="M649 318C715 346 777 346 840 328" class="flow"/>
+    <path d="M551 288C485 260 423 260 360 278" stroke-dasharray="12 14" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-104" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M649 288C715 260 777 260 840 278" stroke-dasharray="12 14" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-104" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M551 318C485 346 423 346 360 328" stroke-dasharray="12 14" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-104" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M649 318C715 346 777 346 840 328" stroke-dasharray="12 14" stroke-dashoffset="0">
+      <animate attributeName="stroke-dashoffset" from="0" to="-104" dur="2.4s" repeatCount="indefinite"/>
+    </path>
   </g>
 
   <!-- Four capability mini cards -->
   <g>
     <rect x="95" y="245" width="265" height="70" rx="17" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".5"/>
-    <circle cx="119" cy="270" r="4" fill="#58A6FF" class="pulse"/>
+    <circle cx="119" cy="270" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
     <text x="134" y="275" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
     <text x="119" y="296" font-size="11.5" font-weight="600" fill="#8B949E">AWS · Azure · Networking</text>
 
     <rect x="840" y="245" width="265" height="70" rx="17" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".5"/>
-    <circle cx="864" cy="270" r="4" fill="#A78BFA" class="pulse"/>
+    <circle cx="864" cy="270" r="4" fill="#A78BFA">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
     <text x="879" y="275" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
     <text x="864" y="296" font-size="11.5" font-weight="600" fill="#8B949E">Jenkins · Terraform · CI/CD</text>
 
     <rect x="95" y="325" width="265" height="70" rx="17" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".45"/>
-    <circle cx="119" cy="350" r="4" fill="#58A6FF" class="pulse"/>
+    <circle cx="119" cy="350" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
     <text x="134" y="355" font-size="14" font-weight="800" fill="#F0F6FC">KUBERNETES</text>
     <text x="119" y="376" font-size="11.5" font-weight="600" fill="#8B949E">EKS · Containers · Scaling</text>
 
     <rect x="840" y="325" width="265" height="70" rx="17" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".45"/>
-    <circle cx="864" cy="350" r="4" fill="#58A6FF" class="pulse"/>
+    <circle cx="864" cy="350" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
     <text x="879" y="355" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
     <text x="864" y="376" font-size="11.5" font-weight="600" fill="#8B949E">Prometheus · Grafana · Elastic</text>
   </g>
@@ -243,13 +160,18 @@
 <g>
   <text x="70" y="515" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">ENGINEERING FOCUS</text>
   <text x="70" y="540" font-size="12.5" fill="#8B949E">Core disciplines behind cloud-native platform delivery</text>
-  <path d="M960 515H1125" stroke="#2F81F7" stroke-width="1.2" stroke-opacity=".22" class="border-flow"/>
-  <circle cx="1125" cy="515" r="3" fill="#58A6FF" class="signal"/>
-
+  <path d="M930 515H1125" stroke="#58A6FF" stroke-width="1.2" stroke-opacity=".22" stroke-dasharray="10 12">
+    <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="1125" cy="515" r="3" fill="#58A6FF">
+    <animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- Card 1 -->
   <rect x="70" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".45"/>
-  <circle cx="94" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="94" cy="594" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="108" y="599" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
   <text x="94" y="630" font-size="11.5" fill="#C9D1D9">AWS · Azure</text>
   <text x="94" y="653" font-size="11.5" fill="#8B949E">Infrastructure · Networking</text>
@@ -257,7 +179,9 @@
 
   <!-- Card 2 -->
   <rect x="340" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".4"/>
-  <circle cx="364" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="364" cy="594" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="378" y="599" font-size="14" font-weight="800" fill="#F0F6FC">PLATFORM</text>
   <text x="364" y="630" font-size="11.5" fill="#C9D1D9">Kubernetes · EKS</text>
   <text x="364" y="653" font-size="11.5" fill="#8B949E">Orchestration · Scaling</text>
@@ -265,7 +189,9 @@
 
   <!-- Card 3 -->
   <rect x="610" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".45"/>
-  <circle cx="634" cy="594" r="4" fill="#A78BFA" class="pulse"/>
+  <circle cx="634" cy="594" r="4" fill="#A78BFA">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
   <text x="648" y="599" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
   <text x="634" y="630" font-size="11.5" fill="#C9D1D9">Jenkins · Terraform</text>
   <text x="634" y="653" font-size="11.5" fill="#8B949E">CI/CD · IaC</text>
@@ -273,7 +199,9 @@
 
   <!-- Card 4 -->
   <rect x="880" y="570" width="250" height="130" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".4"/>
-  <circle cx="904" cy="594" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="904" cy="594" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="918" y="599" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
   <text x="904" y="630" font-size="11.5" fill="#C9D1D9">Prometheus · Grafana</text>
   <text x="904" y="653" font-size="11.5" fill="#8B949E">Metrics · Logs · Alerts</text>
@@ -287,44 +215,74 @@
 <g>
   <text x="70" y="752" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">TECHNOLOGY MATRIX</text>
   <text x="70" y="777" font-size="12.5" fill="#8B949E">Selected tools across cloud, containers, automation and observability</text>
-  <path d="M945 752H1125" stroke="#8B5CF6" stroke-width="1.2" stroke-opacity=".22" class="border-flow"/>
-  <circle cx="1125" cy="752" r="3" fill="#A78BFA" class="signal2"/>
-
+  <path d="M930 752H1125" stroke="#8B5CF6" stroke-width="1.2" stroke-opacity=".22" stroke-dasharray="10 12">
+    <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.4s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="1125" cy="752" r="3" fill="#A78BFA">
+    <animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- tech row 1 -->
   <rect x="70" y="805" width="1060" height="52" rx="15" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".3"/>
-  <circle cx="95" cy="831" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="95" cy="831" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="114" y="836" font-size="12.5" font-weight="850" fill="#F0F6FC">CLOUD</text>
   <text x="235" y="836" font-size="12.3" font-weight="600" fill="#C9D1D9">AWS · Azure · VPC · IAM · EKS · EC2 · RDS · S3 · ECR</text>
 
   <!-- tech row 2 -->
   <rect x="70" y="867" width="1060" height="52" rx="15" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".27"/>
-  <circle cx="95" cy="893" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="95" cy="893" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="114" y="898" font-size="12.5" font-weight="850" fill="#F0F6FC">PLATFORM</text>
   <text x="235" y="898" font-size="12.3" font-weight="600" fill="#C9D1D9">Kubernetes · Docker · Helm · Linux · NGINX · Autoscaling</text>
 
   <!-- tech row 3 -->
   <rect x="70" y="929" width="1060" height="52" rx="15" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".3"/>
-  <circle cx="95" cy="955" r="4" fill="#A78BFA" class="pulse"/>
+  <circle cx="95" cy="955" r="4" fill="#A78BFA">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
   <text x="114" y="960" font-size="12.5" font-weight="850" fill="#F0F6FC">AUTOMATION</text>
   <text x="235" y="960" font-size="12.3" font-weight="600" fill="#C9D1D9">Jenkins · Terraform · GitHub · Git · Bash · Python · CI/CD</text>
 
   <!-- tech row 4 -->
   <rect x="70" y="991" width="1060" height="52" rx="15" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".27"/>
-  <circle cx="95" cy="1017" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="95" cy="1017" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="114" y="1022" font-size="12.5" font-weight="850" fill="#F0F6FC">OBSERVABILITY</text>
   <text x="235" y="1022" font-size="12.3" font-weight="600" fill="#C9D1D9">Prometheus · Grafana · Elastic Stack · CloudWatch · Alerting</text>
 
-  <!-- live telemetry indicators -->
+  <!-- Native-SVG telemetry indicators -->
   <g>
-    <path d="M1020 831h70" stroke="#58A6FF" stroke-width="2" stroke-opacity=".22" class="border-flow"/>
-    <path d="M1020 893h70" stroke="#58A6FF" stroke-width="2" stroke-opacity=".22" class="border-flow"/>
-    <path d="M1020 955h70" stroke="#A78BFA" stroke-width="2" stroke-opacity=".22" class="border-flow"/>
-    <path d="M1020 1017h70" stroke="#58A6FF" stroke-width="2" stroke-opacity=".22" class="border-flow"/>
-    <circle cx="1092" cy="831" r="3" fill="#58A6FF" class="signal"/>
-    <circle cx="1092" cy="893" r="3" fill="#58A6FF" class="signal2"/>
-    <circle cx="1092" cy="955" r="3" fill="#A78BFA" class="signal"/>
-    <circle cx="1092" cy="1017" r="3" fill="#58A6FF" class="signal2"/>
+    <path d="M1010 831H1090" stroke="#58A6FF" stroke-width="1.6" stroke-dasharray="8 10" opacity=".30">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="2.4s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="1094" cy="831" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <path d="M1010 893H1090" stroke="#58A6FF" stroke-width="1.6" stroke-dasharray="8 10" opacity=".30">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="1094" cy="893" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <path d="M1010 955H1090" stroke="#A78BFA" stroke-width="1.6" stroke-dasharray="8 10" opacity=".30">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="1094" cy="955" r="3" fill="#A78BFA">
+      <animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <path d="M1010 1017H1090" stroke="#58A6FF" stroke-width="1.6" stroke-dasharray="8 10" opacity=".30">
+      <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="1094" cy="1017" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
 </g>
@@ -336,41 +294,59 @@
 <g>
   <text x="70" y="1098" font-size="16" font-weight="850" letter-spacing="3" fill="#58A6FF">FEATURED ENGINEERING</text>
   <text x="70" y="1123" font-size="12.5" fill="#8B949E">Selected automation, Kubernetes, observability and platform projects</text>
-  <path d="M930 1098H1125" stroke="#2F81F7" stroke-width="1.2" stroke-opacity=".22" class="border-flow"/>
-  <circle cx="1125" cy="1098" r="3" fill="#58A6FF" class="signal"/>
-
+  <path d="M900 1098H1125" stroke="#58A6FF" stroke-width="1.2" stroke-opacity=".22" stroke-dasharray="10 12">
+    <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="2.7s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="1125" cy="1098" r="3" fill="#58A6FF">
+    <animate attributeName="opacity" values=".2;1;.2" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- row 1 -->
   <rect x="70" y="1152" width="515" height="112" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".43"/>
-  <circle cx="95" cy="1178" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="95" cy="1178" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="112" y="1183" font-size="14" font-weight="850" fill="#F0F6FC">AWS LOAD TESTING PLATFORM</text>
   <text x="95" y="1211" font-size="11.5" fill="#C9D1D9">JMeter · AWS · Terraform · Jenkins · Docker</text>
   <text x="95" y="1237" font-size="10.5" font-weight="750" fill="#58A6FF">PERFORMANCE · IaC · CI/CD</text>
 
   <rect x="615" y="1152" width="515" height="112" rx="18" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".43"/>
-  <circle cx="640" cy="1178" r="4" fill="#A78BFA" class="pulse"/>
+  <circle cx="640" cy="1178" r="4" fill="#A78BFA">
+    <animate attributeName="opacity" values=".35;1;.35" dur="3.1s" repeatCount="indefinite"/>
+  </circle>
   <text x="657" y="1183" font-size="14" font-weight="850" fill="#F0F6FC">EKS OBSERVABILITY PLATFORM</text>
   <text x="640" y="1211" font-size="11.5" fill="#C9D1D9">EKS · Prometheus · Grafana · Helm · EFS</text>
   <text x="640" y="1237" font-size="10.5" font-weight="750" fill="#A78BFA">OBSERVABILITY · EKS · RELIABILITY</text>
 
   
-  <!-- project activity indicators -->
   <g>
-    <circle cx="560" cy="1178" r="3.2" fill="#58A6FF" class="signal"/>
-    <circle cx="1105" cy="1178" r="3.2" fill="#A78BFA" class="signal2"/>
-    <circle cx="560" cy="1304" r="3.2" fill="#58A6FF" class="signal2"/>
-    <circle cx="1105" cy="1304" r="3.2" fill="#58A6FF" class="signal"/>
+    <circle cx="560" cy="1178" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1105" cy="1178" r="3" fill="#A78BFA">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="1304" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1105" cy="1304" r="3" fill="#58A6FF">
+      <animate attributeName="opacity" values=".2;1;.2" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
 <!-- row 2 -->
   <rect x="70" y="1278" width="515" height="112" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".38"/>
-  <circle cx="95" cy="1304" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="95" cy="1304" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="112" y="1309" font-size="14" font-weight="850" fill="#F0F6FC">KUBERNETES AUTOMATION</text>
   <text x="95" y="1337" font-size="11.5" fill="#C9D1D9">HPA · Rollout · PodDisruptionBudget · Jenkins</text>
   <text x="95" y="1363" font-size="10.5" font-weight="750" fill="#58A6FF">SCALING · AVAILABILITY · OPERATIONS</text>
 
   <rect x="615" y="1278" width="515" height="112" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".38"/>
-  <circle cx="640" cy="1304" r="4" fill="#58A6FF" class="pulse"/>
+  <circle cx="640" cy="1304" r="4" fill="#58A6FF">
+    <animate attributeName="opacity" values=".35;1;.35" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
   <text x="657" y="1309" font-size="14" font-weight="850" fill="#F0F6FC">CONTAINER BUILD &amp; RELEASE</text>
   <text x="640" y="1337" font-size="11.5" fill="#C9D1D9">Docker · Jenkins · AWS · ECR</text>
   <text x="640" y="1363" font-size="10.5" font-weight="750" fill="#58A6FF">CONTAINERS · RELEASE ENGINEERING</text>
@@ -397,11 +373,17 @@
   <text x="1130" y="1501" text-anchor="end" font-size="11.5" font-weight="700" fill="#8B949E">
     LinkedIn · Credly · GitHub
   </text>
-  <path d="M720 1518H760L768 1508L778 1526L790 1498L804 1518H930" stroke="#58A6FF" stroke-width="1.4" fill="none" stroke-opacity=".35" class="data-pulse"/>
-
+  <path d="M720 1518H760L768 1508L778 1526L790 1498L804 1518H930"
+        stroke="#58A6FF" stroke-width="1.4" fill="none" opacity=".28">
+    <animate attributeName="opacity" values=".18;.65;.18" dur="2.8s" repeatCount="indefinite"/>
+  </path>
 </g>
 
 <!-- Outer border -->
 <rect x=".75" y=".75" width="1198.5" height="1538.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
-<rect x="3.5" y="3.5" width="1193" height="1533" rx="25" fill="none" stroke="url(#accent)" stroke-width="1" stroke-opacity=".18" class="border-flow"/>
+<rect x="3.5" y="3.5" width="1193" height="1533" rx="25" fill="none"
+      stroke="url(#accent)" stroke-width="1" opacity=".16" stroke-dasharray="18 14">
+  <animate attributeName="stroke-dashoffset" from="0" to="-128" dur="7s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values=".10;.26;.10" dur="5s" repeatCount="indefinite"/>
+</rect>
 </svg>

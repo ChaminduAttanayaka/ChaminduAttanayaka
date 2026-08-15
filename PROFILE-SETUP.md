@@ -1,37 +1,35 @@
-# One-Page Animated GitHub Portfolio v2
+# One-Page Animated GitHub Portfolio v3
 
-This enhanced version keeps the stable one-page layout while adding more GitHub-safe animation.
+This version replaces CSS keyframe animations with native SVG/SMIL animation.
 
-## Added animation
+## Why
 
-- animated outer border flow
-- additional network/data-flow lines
-- pulsing status nodes
-- live telemetry indicators
-- central platform glow rings
-- activity lights on project cards
-- animated technology-row signals
-- subtle footer heartbeat/data line
+GitHub may render CSS animation inside repository SVGs inconsistently.
+This version uses `<animate>` directly inside SVG elements.
 
-## Safe animation rule
+## Animated elements
 
-No CSS transform animation is used on positioned SVG groups.
+- engineering-online status light
+- central platform pulse rings
+- moving dashed data-flow lines
+- capability/focus status dots
+- technology telemetry lines
+- project activity indicators
+- section data-flow indicators
+- bottom telemetry heartbeat
+- subtle animated page border
 
-That avoids the overlap bug seen in the earlier multi-section design.
+No card positions are animated, so the layout remains fixed.
 
-## Files
+## Install
 
-```text
-README.md
-PROFILE-SETUP.md
-assets/
-  portfolio.svg
-```
-
-## Update your GitHub profile
+Replace your current `assets/portfolio.svg` and `README.md`, then:
 
 ```bash
-git add README.md PROFILE-SETUP.md assets/portfolio.svg
-git commit -m "feat: enhance animated GitHub portfolio"
+git add README.md assets/portfolio.svg
+git commit -m "fix: use native SVG animation for GitHub profile"
 git push origin main
 ```
+
+If GitHub still shows the old SVG after pushing, hard-refresh the profile page or rename
+`portfolio.svg` to `portfolio-v3.svg` and update the README path to bypass image caching.
