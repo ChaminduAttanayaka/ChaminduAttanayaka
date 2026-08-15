@@ -1,53 +1,37 @@
-# One-Page GitHub Portfolio
+# One-Page Animated GitHub Portfolio v2
 
-This version fixes the card-overlap problem in the previous animated profile.
+This enhanced version keeps the stable one-page layout while adding more GitHub-safe animation.
 
-## Why the old version broke
+## Added animation
 
-The previous SVG files animated CSS `transform` on groups that also used SVG `transform="translate(...)"`.
-GitHub/browser SVG rendering can replace the original transform during animation, causing cards to move to the SVG origin and overlap.
+- animated outer border flow
+- additional network/data-flow lines
+- pulsing status nodes
+- live telemetry indicators
+- central platform glow rings
+- activity lights on project cards
+- animated technology-row signals
+- subtle footer heartbeat/data line
 
-This version avoids transform animation completely.
+## Safe animation rule
 
-Animations are limited to:
+No CSS transform animation is used on positioned SVG groups.
 
-- opacity pulsing
-- subtle background breathing
-- animated dashed connector lines
-- glow effects
+That avoids the overlap bug seen in the earlier multi-section design.
 
-All portfolio components now live inside a single:
-
-`assets/portfolio.svg`
-
-## Structure
+## Files
 
 ```text
-ChaminduAttanayaka/
-├── README.md
-├── PROFILE-SETUP.md
-└── assets/
-    └── portfolio.svg
+README.md
+PROFILE-SETUP.md
+assets/
+  portfolio.svg
 ```
 
-## Install
-
-Copy these files into the special GitHub profile repository:
-
-`ChaminduAttanayaka/ChaminduAttanayaka`
-
-Then run:
+## Update your GitHub profile
 
 ```bash
 git add README.md PROFILE-SETUP.md assets/portfolio.svg
-git commit -m "feat: add one-page animated engineering portfolio"
+git commit -m "feat: enhance animated GitHub portfolio"
 git push origin main
 ```
-
-## Important
-
-Keep the `portfolio.svg` path unchanged because `README.md` loads:
-
-`./assets/portfolio.svg`
-
-The links below the SVG remain regular Markdown links because individual areas inside an SVG embedded through an `<img>` tag are not reliably clickable on GitHub.
