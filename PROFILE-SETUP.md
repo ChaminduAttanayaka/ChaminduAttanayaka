@@ -1,62 +1,45 @@
-# GitHub Profile Setup
+# Animated GitHub Portfolio — Setup
 
-This package is ready for the special GitHub profile repository:
+This package is designed for the special GitHub profile repository:
 
 `ChaminduAttanayaka/ChaminduAttanayaka`
 
-## Repository structure
+## Structure
 
 ```text
 ChaminduAttanayaka/
 ├── README.md
-├── assets/
-│   └── hero.svg
-└── PROFILE-SETUP.md
+├── PROFILE-SETUP.md
+└── assets/
+    ├── hero.svg
+    ├── engineering-focus.svg
+    ├── technology-matrix.svg
+    ├── featured-engineering.svg
+    ├── certifications.svg
+    └── footer.svg
 ```
 
-## Option 1 — Existing profile repository
+## Install
+
+If the profile repository already exists:
 
 ```bash
 git clone https://github.com/ChaminduAttanayaka/ChaminduAttanayaka.git
 cd ChaminduAttanayaka
 ```
 
-Copy `README.md` and the `assets` directory from this package into the repository, then run:
-
-```bash
-git add README.md assets/hero.svg
-git commit -m "feat: redesign GitHub engineering portfolio"
-git push origin main
-```
-
-## Option 2 — New repository
-
-Create a new **public** GitHub repository named exactly:
-
-`ChaminduAttanayaka`
+Copy all files from this package into the repository.
 
 Then:
 
 ```bash
-git clone https://github.com/ChaminduAttanayaka/ChaminduAttanayaka.git
-cd ChaminduAttanayaka
-```
-
-Copy the package files into it and push:
-
-```bash
-git add .
-git commit -m "feat: add GitHub engineering portfolio"
+git add README.md PROFILE-SETUP.md assets/
+git commit -m "feat: add animated GitHub engineering portfolio"
 git push origin main
 ```
 
-## Recommended GitHub profile bio
+## Important GitHub limitation
 
-`DevOps Engineer | Cloud & Platform Engineering | AWS • Azure • Kubernetes • Terraform • Jenkins`
+GitHub strips normal webpage CSS and JavaScript from README files. This portfolio therefore uses self-contained SVG animations, which is the most practical way to create an animated GitHub profile while staying inside GitHub's README renderer.
 
-## Notes
-
-- Keep the repository public.
-- Do not rename `README.md`.
-- Keep `assets/hero.svg` in the same relative location.
-- GitHub profile repositories display `README.md` automatically on the main profile.
+The repository links remain normal Markdown links below the visual Featured Engineering section because links inside an embedded SVG image are not reliably interactive when rendered by GitHub.

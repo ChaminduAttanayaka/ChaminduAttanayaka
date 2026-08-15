@@ -1,0 +1,42 @@
+<svg width="1200" height="385" viewBox="0 0 1200 385" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <style>
+ text{font-family:Inter,Segoe UI,Arial,sans-serif}
+ @keyframes slide{0%{transform:translateX(-8px);opacity:.55}50%{transform:translateX(8px);opacity:1}100%{transform:translateX(-8px);opacity:.55}}
+ @keyframes glow{0%,100%{opacity:.25}50%{opacity:.9}}
+ .r1{animation:slide 5s ease-in-out infinite}.r2{animation:slide 5.6s ease-in-out .6s infinite}.r3{animation:slide 6s ease-in-out 1.1s infinite}.r4{animation:slide 5.2s ease-in-out 1.5s infinite}
+ .p{animation:glow 2.4s ease-in-out infinite}
+ </style>
+</defs>
+<rect width="1200" height="385" rx="26" fill="#07101C"/>
+<text x="56" y="58" font-size="17" font-weight="800" letter-spacing="3" fill="#58A6FF">TECHNOLOGY MATRIX</text>
+<text x="56" y="86" font-size="13" fill="#8B949E">Core tools across cloud, platform, automation and observability</text>
+
+<g transform="translate(62 120)">
+<g class="r1">
+ <rect width="1076" height="52" rx="16" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".35"/>
+ <circle cx="26" cy="26" r="5" fill="#58A6FF" class="p"/>
+ <text x="48" y="32" font-size="13" font-weight="800" fill="#F0F6FC">CLOUD</text>
+ <text x="180" y="32" font-size="13" font-weight="650" fill="#C9D1D9">AWS   ·   Azure   ·   VPC   ·   IAM   ·   EKS   ·   EC2   ·   RDS   ·   S3   ·   ECR</text>
+</g>
+<g transform="translate(0 64)" class="r2">
+ <rect width="1076" height="52" rx="16" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".3"/>
+ <circle cx="26" cy="26" r="5" fill="#58A6FF" class="p"/>
+ <text x="48" y="32" font-size="13" font-weight="800" fill="#F0F6FC">PLATFORM</text>
+ <text x="180" y="32" font-size="13" font-weight="650" fill="#C9D1D9">Kubernetes   ·   Docker   ·   Helm   ·   Linux   ·   NGINX   ·   Autoscaling</text>
+</g>
+<g transform="translate(0 128)" class="r3">
+ <rect width="1076" height="52" rx="16" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".35"/>
+ <circle cx="26" cy="26" r="5" fill="#A78BFA" class="p"/>
+ <text x="48" y="32" font-size="13" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
+ <text x="180" y="32" font-size="13" font-weight="650" fill="#C9D1D9">Jenkins   ·   Terraform   ·   GitHub   ·   Git   ·   Bash   ·   Python   ·   CI/CD</text>
+</g>
+<g transform="translate(0 192)" class="r4">
+ <rect width="1076" height="52" rx="16" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".3"/>
+ <circle cx="26" cy="26" r="5" fill="#58A6FF" class="p"/>
+ <text x="48" y="32" font-size="13" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
+ <text x="180" y="32" font-size="13" font-weight="650" fill="#C9D1D9">Prometheus   ·   Grafana   ·   Elastic Stack   ·   CloudWatch   ·   Alerting</text>
+</g>
+</g>
+<rect x=".75" y=".75" width="1198.5" height="383.5" rx="25.25" fill="none" stroke="#30363D" stroke-width="1.5"/>
+</svg>

@@ -1,212 +1,79 @@
-<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#07111F"/>
-      <stop offset="0.5" stop-color="#0B1424"/>
-      <stop offset="1" stop-color="#0A1020"/>
-    </linearGradient>
+<svg width="1200" height="500" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="500">
+    <stop stop-color="#050B14"/><stop offset=".5" stop-color="#0A1220"/><stop offset="1" stop-color="#07101C"/>
+  </linearGradient>
+  <linearGradient id="acc" x1="220" y1="0" x2="980" y2="500">
+    <stop stop-color="#2F81F7"/><stop offset=".55" stop-color="#58A6FF"/><stop offset="1" stop-color="#8B5CF6"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    text{font-family:Inter,Segoe UI,Arial,sans-serif}
+    @keyframes dash{to{stroke-dashoffset:-80}}
+    @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+    @keyframes up{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    @keyframes sweep{0%{transform:translateX(-260px);opacity:0}15%{opacity:.35}50%{opacity:.6}85%{opacity:.35}100%{transform:translateX(1450px);opacity:0}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .flow{stroke-dasharray:12 13;animation:dash 2.2s linear infinite}
+    .pulse{animation:pulse 2.4s ease-in-out infinite}
+    .f1{animation:up 4s ease-in-out infinite}.f2{animation:up 4.8s ease-in-out .5s infinite}.f3{animation:up 5.3s ease-in-out 1s infinite}
+    .spin{transform-box:fill-box;transform-origin:center;animation:spin 18s linear infinite}
+    .sweep{animation:sweep 7s ease-in-out infinite}
+  </style>
+</defs>
+<rect width="1200" height="500" rx="28" fill="url(#bg)"/>
+<g opacity=".08" stroke="#8B949E">
+  <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200"/>
+  <path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500M800 0V500M900 0V500M1000 0V500M1100 0V500"/>
+</g>
+<rect x="-250" y="0" width="180" height="500" fill="url(#acc)" opacity=".09" class="sweep"/>
 
-    <linearGradient id="accent" x1="250" y1="0" x2="950" y2="420" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2F81F7"/>
-      <stop offset="0.5" stop-color="#58A6FF"/>
-      <stop offset="1" stop-color="#8B5CF6"/>
-    </linearGradient>
+<g transform="translate(48 38)">
+  <rect width="190" height="32" rx="16" fill="#0D1A2B" stroke="#2F81F7" stroke-opacity=".55"/>
+  <circle cx="18" cy="16" r="5" fill="#3FB950" class="pulse"/>
+  <text x="32" y="21" font-size="12" font-weight="700" letter-spacing="1" fill="#C9D1D9">ENGINEERING ONLINE</text>
+</g>
 
-    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#2F81F7" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#58A6FF"/>
-      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
-    </linearGradient>
+<text x="600" y="118" text-anchor="middle" font-size="17" font-weight="700" letter-spacing="5" fill="#58A6FF">DEVOPS · CLOUD · PLATFORM</text>
+<text x="600" y="176" text-anchor="middle" font-size="48" font-weight="800" fill="#F0F6FC">CHAMINDU ATTANAYAKA</text>
+<text x="600" y="210" text-anchor="middle" font-size="17" font-weight="500" fill="#8B949E">Automation-first cloud engineering with reliability and observability at the core</text>
 
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+<g transform="translate(600 310)">
+  <circle r="54" fill="#0C1727" stroke="url(#acc)" stroke-width="2"/>
+  <circle r="76" fill="none" stroke="#58A6FF" stroke-opacity=".13"/>
+  <g class="spin"><circle cx="0" cy="-76" r="4" fill="#58A6FF" filter="url(#glow)"/></g>
+  <text y="-5" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="1.2" fill="#58A6FF">PLATFORM</text>
+  <text y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#C9D1D9">ENGINEERING</text>
+</g>
 
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="12"/>
-    </filter>
+<g stroke="url(#acc)" fill="none" stroke-width="1.7" opacity=".8">
+  <path d="M546 294C490 267 430 267 370 283" class="flow"/>
+  <path d="M654 294C710 267 770 267 830 283" class="flow"/>
+  <path d="M546 328C490 354 430 354 370 338" class="flow"/>
+  <path d="M654 328C710 354 770 354 830 338" class="flow"/>
+</g>
 
-    <clipPath id="clip">
-      <rect x="0" y="0" width="1200" height="420" rx="28"/>
-    </clipPath>
+<g transform="translate(115 246)" class="f1">
+  <rect width="265" height="78" rx="18" fill="#0C1727" stroke="#2F81F7" stroke-opacity=".5"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
+  <text x="24" y="54" font-size="12" font-weight="600" fill="#8B949E">AWS · Azure · Networking</text>
+</g>
+<g transform="translate(820 246)" class="f2">
+  <rect width="265" height="78" rx="18" fill="#0C1727" stroke="#8B5CF6" stroke-opacity=".5"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
+  <text x="24" y="54" font-size="12" font-weight="600" fill="#8B949E">Jenkins · Terraform · CI/CD</text>
+</g>
+<g transform="translate(115 336)" class="f3">
+  <rect width="265" height="78" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".4"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#F0F6FC">KUBERNETES</text>
+  <text x="24" y="54" font-size="12" font-weight="600" fill="#8B949E">EKS · Containers · Scaling</text>
+</g>
+<g transform="translate(820 336)" class="f1">
+  <rect width="265" height="78" rx="18" fill="#0C1727" stroke="#58A6FF" stroke-opacity=".4"/>
+  <text x="24" y="32" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
+  <text x="24" y="54" font-size="12" font-weight="600" fill="#8B949E">Prometheus · Grafana · Elastic</text>
+</g>
 
-    <style>
-      .grid { opacity: .07; }
-      .muted { fill: #8B949E; }
-      .white { fill: #F0F6FC; }
-      .blue { fill: #58A6FF; }
-      .violet { fill: #A78BFA; }
-
-      @keyframes dash {
-        to { stroke-dashoffset: -44; }
-      }
-
-      @keyframes pulse {
-        0%, 100% { opacity: .35; transform: scale(1); }
-        50% { opacity: .95; transform: scale(1.08); }
-      }
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
-      }
-
-      @keyframes shimmer {
-        0% { transform: translateX(-340px); opacity: 0; }
-        20% { opacity: .5; }
-        50% { opacity: .9; }
-        80% { opacity: .5; }
-        100% { transform: translateX(1360px); opacity: 0; }
-      }
-
-      @keyframes fadeIn {
-        0% { opacity: 0; transform: translateY(8px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-
-      @keyframes orbit {
-        from { transform: rotate(0deg); transform-origin: 600px 218px; }
-        to { transform: rotate(360deg); transform-origin: 600px 218px; }
-      }
-
-      .flow {
-        stroke-dasharray: 10 12;
-        animation: dash 2.2s linear infinite;
-      }
-
-      .pulse {
-        transform-box: fill-box;
-        transform-origin: center;
-        animation: pulse 2.6s ease-in-out infinite;
-      }
-
-      .float1 { animation: float 4s ease-in-out infinite; }
-      .float2 { animation: float 4.8s ease-in-out infinite .4s; }
-      .float3 { animation: float 5.2s ease-in-out infinite .8s; }
-      .float4 { animation: float 4.4s ease-in-out infinite 1.2s; }
-
-      .fade1 { animation: fadeIn .7s ease-out both .15s; }
-      .fade2 { animation: fadeIn .8s ease-out both .35s; }
-      .fade3 { animation: fadeIn .8s ease-out both .55s; }
-
-      .shimmer {
-        animation: shimmer 7s ease-in-out infinite 1s;
-      }
-
-      .orbit {
-        animation: orbit 18s linear infinite;
-      }
-
-      text {
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-    </style>
-  </defs>
-
-  <g clip-path="url(#clip)">
-    <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
-
-    <!-- Ambient glow -->
-    <circle cx="180" cy="70" r="190" fill="#2F81F7" opacity=".09" filter="url(#softGlow)"/>
-    <circle cx="1015" cy="345" r="220" fill="#8B5CF6" opacity=".08" filter="url(#softGlow)"/>
-
-    <!-- Grid -->
-    <g class="grid" stroke="#8B949E" stroke-width="1">
-      <path d="M0 70H1200M0 140H1200M0 210H1200M0 280H1200M0 350H1200"/>
-      <path d="M100 0V420M200 0V420M300 0V420M400 0V420M500 0V420M600 0V420M700 0V420M800 0V420M900 0V420M1000 0V420M1100 0V420"/>
-    </g>
-
-    <!-- Decorative moving shimmer -->
-    <rect x="-360" y="0" width="170" height="420" fill="url(#lineGrad)" opacity=".25" class="shimmer"/>
-
-    <!-- Top status -->
-    <g transform="translate(42,34)">
-      <rect width="177" height="30" rx="15" fill="#0D1B2A" stroke="#1F6FEB" stroke-opacity=".55"/>
-      <circle cx="18" cy="15" r="5" fill="#3FB950" class="pulse"/>
-      <text x="32" y="20" font-size="12" font-weight="700" letter-spacing=".8" fill="#C9D1D9">ENGINEERING ONLINE</text>
-    </g>
-
-    <!-- Hero copy -->
-    <g class="fade1">
-      <text x="600" y="98" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="4" fill="#58A6FF">DEVOPS · CLOUD · PLATFORM</text>
-      <text x="600" y="148" text-anchor="middle" font-size="46" font-weight="800" letter-spacing="1.5" fill="#F0F6FC">CHAMINDU ATTANAYAKA</text>
-      <text x="600" y="180" text-anchor="middle" font-size="17" font-weight="500" fill="#8B949E">Building automated, observable and resilient cloud platforms</text>
-    </g>
-
-    <!-- Central orchestration hub -->
-    <g class="fade2">
-      <circle cx="600" cy="254" r="44" fill="#0D1627" stroke="url(#accent)" stroke-width="2"/>
-      <circle cx="600" cy="254" r="61" fill="none" stroke="#2F81F7" stroke-opacity=".14"/>
-      <circle cx="600" cy="254" r="76" fill="none" stroke="#8B5CF6" stroke-opacity=".08"/>
-      <g class="orbit">
-        <circle cx="600" cy="178" r="4" fill="#58A6FF" filter="url(#glow)"/>
-      </g>
-      <text x="600" y="249" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="1" fill="#58A6FF">PLATFORM</text>
-      <text x="600" y="267" text-anchor="middle" font-size="11" font-weight="600" fill="#C9D1D9">ENGINEERING</text>
-    </g>
-
-    <!-- Connections -->
-    <g stroke="url(#accent)" stroke-width="1.7" fill="none" opacity=".8">
-      <path d="M565 241C505 215 453 214 394 231" class="flow"/>
-      <path d="M635 241C695 215 747 214 806 231" class="flow"/>
-      <path d="M568 273C510 300 452 304 392 293" class="flow"/>
-      <path d="M632 273C690 300 748 304 808 293" class="flow"/>
-    </g>
-
-    <!-- Cloud card -->
-    <g transform="translate(126,206)" class="float1 fade3">
-      <rect width="278" height="82" rx="18" fill="#0D1627" stroke="#1F6FEB" stroke-opacity=".55"/>
-      <rect x="18" y="17" width="48" height="48" rx="12" fill="#10233F"/>
-      <path d="M33 51h20a8 8 0 0 0 1-15.9A12 12 0 0 0 31 37a7 7 0 0 0 2 14Z" fill="none" stroke="#58A6FF" stroke-width="2"/>
-      <text x="82" y="35" font-size="14" font-weight="800" fill="#F0F6FC">CLOUD</text>
-      <text x="82" y="56" font-size="12" font-weight="600" fill="#8B949E">AWS · Azure · Networking</text>
-    </g>
-
-    <!-- Automation card -->
-    <g transform="translate(796,206)" class="float2 fade3">
-      <rect width="278" height="82" rx="18" fill="#0D1627" stroke="#8B5CF6" stroke-opacity=".52"/>
-      <rect x="18" y="17" width="48" height="48" rx="12" fill="#1A1537"/>
-      <path d="M30 41h24M42 29v24M33 32l18 18M51 32L33 50" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
-      <text x="82" y="35" font-size="14" font-weight="800" fill="#F0F6FC">AUTOMATION</text>
-      <text x="82" y="56" font-size="12" font-weight="600" fill="#8B949E">Jenkins · Terraform · CI/CD</text>
-    </g>
-
-    <!-- Kubernetes card -->
-    <g transform="translate(126,296)" class="float3 fade3">
-      <rect width="278" height="82" rx="18" fill="#0D1627" stroke="#2F81F7" stroke-opacity=".45"/>
-      <rect x="18" y="17" width="48" height="48" rx="12" fill="#10233F"/>
-      <circle cx="42" cy="41" r="12" fill="none" stroke="#58A6FF" stroke-width="2"/>
-      <path d="M42 25v7M42 50v7M26 41h7M51 41h7M31 30l5 5M48 47l5 5M53 30l-5 5M36 47l-5 5" stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
-      <text x="82" y="35" font-size="14" font-weight="800" fill="#F0F6FC">KUBERNETES</text>
-      <text x="82" y="56" font-size="12" font-weight="600" fill="#8B949E">EKS · Containers · Scaling</text>
-    </g>
-
-    <!-- Observability card -->
-    <g transform="translate(796,296)" class="float4 fade3">
-      <rect width="278" height="82" rx="18" fill="#0D1627" stroke="#58A6FF" stroke-opacity=".45"/>
-      <rect x="18" y="17" width="48" height="48" rx="12" fill="#10233F"/>
-      <path d="M29 50l8-10 7 6 10-15" fill="none" stroke="#58A6FF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="29" cy="50" r="2.5" fill="#58A6FF"/>
-      <circle cx="37" cy="40" r="2.5" fill="#58A6FF"/>
-      <circle cx="44" cy="46" r="2.5" fill="#58A6FF"/>
-      <circle cx="54" cy="31" r="2.5" fill="#58A6FF"/>
-      <text x="82" y="35" font-size="14" font-weight="800" fill="#F0F6FC">OBSERVABILITY</text>
-      <text x="82" y="56" font-size="12" font-weight="600" fill="#8B949E">Prometheus · Grafana · Elastic</text>
-    </g>
-
-    <!-- Footer -->
-    <g>
-      <line x1="410" y1="399" x2="790" y2="399" stroke="url(#lineGrad)" stroke-width="1.5"/>
-      <text x="600" y="406" text-anchor="middle" font-size="11" font-weight="800" letter-spacing="3" fill="#6E7681">
-        BUILD · AUTOMATE · OBSERVE · SCALE
-      </text>
-    </g>
-
-    <!-- Border -->
-    <rect x="0.75" y="0.75" width="1198.5" height="418.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
-  </g>
+<text x="600" y="465" text-anchor="middle" font-size="11" font-weight="800" letter-spacing="4" fill="#6E7681">BUILD · AUTOMATE · OBSERVE · SCALE</text>
+<rect x=".75" y=".75" width="1198.5" height="498.5" rx="27.25" stroke="#30363D" stroke-width="1.5"/>
 </svg>
